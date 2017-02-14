@@ -1,22 +1,31 @@
 # Using the High Performance Computing (HPC) systems at Sheffield
 
+## Presentation
+
+The presentation given during the session is at https://mikecroucher.github.io/Intro_to_HPC/#/
+
 ## Description of Sheffield's HPC Systems
 
 The University of Sheffield has two HPC systems:-
 
 * [Sharc](http://docs.hpc.shef.ac.uk/en/latest/sharc/) Sheffield's newest system. It contains about 2000 CPU cores all of which are latest generation.
-* [Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/) Iceberg is Sheffield's old system. It contains 3440 CPU cores but many of them are very old.
+* [Iceberg](http://docs.hpc.shef.ac.uk/en/latest/iceberg/) Iceberg is Sheffield's old system. It contains 3440 CPU cores but many of them are very old and slow.
 
+The two systems are broadly similar but have small differences in the way you load applications using the module system.
+
+**We recommend that you use Sharc as much as possible.**
 
 <h2>Connecting to the HPC systems from Windows</h2>
 
-To use the HPC from a Windows machine, you need a way to connect - we recommend you install  <tt>mobaXterm</tt>. This is available from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net). On a University machine, you need to install the <tt>portable</tt> version (highlighted in the image below):
+To use the HPC from a Windows machine, you need a way to connect - we recommend you install  `mobaXterm`.
+This is available from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net).
+On a University machine, you need to install the `portable` version (highlighted in the image below):
 
 <img src="images/mobaXterm_download.png" />
 
-You can install the full version if you wish to install <tt>mobaXterm</tt> on your own machine. (Note that you can connect to <tt>iceberg</tt> from any location, but will need to be on the University network or use VPN to connect to <tt>sharc</tt>.)
+You can install the full version if you wish to install `mobaXterm` on your own machine. (Note that you can connect to `iceberg` from any location, but will need to be on the University network or use VPN to connect to `sharc`.)
 
-<tt>mobaXterm</tt> also contains <tt>mobaTextEditor</tt> which you can use to write your programs.
+`mobaXterm` also contains `mobaTextEditor` which you can use to write your programs.
 
 <h2>Using <tt>iceberg</tt></h2>
 
