@@ -15,7 +15,9 @@ The two systems are broadly similar but have small differences in the way you lo
 
 **We recommend that you use Sharc as much as possible.**
 
-<h2>Connecting to the HPC systems from Windows</h2>
+## Connecting to the HPC systems from Windows
+
+### Exercise 1: Install MobaXterm
 
 To use the HPC from a Windows machine, you need a way to connect - we recommend you install  `mobaXterm`.
 This is available from [http://mobaxterm.mobatek.net](http://mobaxterm.mobatek.net).
@@ -28,11 +30,16 @@ Do not run MobaXterm directly from the zip file.
 
 `mobaXterm` also contains `mobaTextEditor` which you can use to write your programs.
 
-<h2>Log in to `Sharc`</h2>
+### Exercise 2: Log in to Sharc
 
-You can connect to `Sharc` (and `iceberg`) using <tt>mobaXterm</tt>:
+You can connect to `Sharc` using `mobaXterm` as shown in the screenshot below.
+The `Remote Host` field should contain `sharc.sheffield.ac.uk`:
 
 <img src="images/mobaxterm_sharc.png" />
+
+If your log-in is successful, you should see something like the screen below.
+
+<img src="images/sharc_login.png" />
 
 To run a <tt>scala</tt> program on a Linux machine, it will need to be compiled using the [Scala build tool](http://www.scala-sbt.org/). This requires a very strict directory structure <b>and</b> a <tt>.sbt</tt> file specifying dependencies. We illustrate this on the <tt>helloWorld</tt> example.
 
