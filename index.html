@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Introduction to High Performance Computing (HPC)</h2>
+				</section>
+				<section>
+					<h2>Laptop</h2>
+					<img src="images/MacBook_Pro.jpg" width="300">
+					<p class="fragment fade-in">2 CPU Cores <span class="fragment fade-in">(standard 3.3Ghz, Turbo Boost 3.6Ghz)</span></p>
+					<p class="fragment fade-in">8 Gb RAM</p>
+					<p  class="fragment fade-in">500Gb Disk</p>
+					<p  class="fragment fade-in">Users: <span class="fragment fade in">1</span></p>
+				</section>
+
+				<section>
+					<h2>Workstation</h2>
+					<img src="images/dell.jpg" width="300">
+					<p class="fragment fade-in">12 CPU Cores <span class="fragment fade-in">(standard 2.6Ghz, Turbo Boost 3.5Ghz)</span></p>
+					<p class="fragment fade-in">64 Gb RAM</p>
+					<p  class="fragment fade-in">2Tb Disk</p>
+					<p  class="fragment fade-in">Users: <span class="fragment fade in">1</span></p>
+				</section>
+
+				<section>
+					<h2>Workstation</h2>
+					<p>The expensive Workstation is slower!</p>
+				</section>
+
+				<section>
+					<h2>Workstation</h2>
+					<p>Good news: You can use it just like you used your laptop (1 user)</p>
+					<p class="fragment fade-in">Bad news: You need to use <b>parallel programming</b> to access all of it's power</p>
+				</section>
+
+				<section><h1>Think Parallel</h1></section>
+
+				<section><h1>Supercomputer</h1>
+				<p class="fragment fade-in">Not a big single computer. <span class="fade-in">Lots of connected computers.</span></p>
+				<p class="fragment fade-in">Each 'sub computer' is called a node.</p>
+				<p class="fragment fade-in">Nodes are fully independent computers.</p>
+        </section>
+
+				<section data-background="images/HPC_2_lg.gif" data-background-size="contain"></section>
+
+
+				<section>
+						<h1>Sheffield - ShARC</h1>
+            <p class="fragment fade-in">120 Nodes</p>
+						<p class="fragment fade-in">Standard nodes: 16 CPU cores @ 2.4Ghz and 64Gb RAM</p>
+						<p class="fragment fade-in">Big memory nodes: 16 CPU cores @ 2.4 Ghz and 768Gb RAM</p>
+						<p class="fragment fade-in">1920 cores in total</p>
+						<p class="fragment fade-in">Users: <span class="fragment fade-in">100s</span></p>
+				</section>
+
+				<section>
+					<h2>Problem 1</h2>
+					<p class="fragment fade-in">Even slower clock speed!</p>
+					<p class="fragment fade-in">Solution: <span class="fragment fade-in">Think parallel</span></p>
+				</section>
+
+				<section>
+					<h2>Problem 2</h2>
+					<p class="fragment fade-in">Multiple nodes</p>
+					<p class="fragment fade-in">Solution: <span class="fragment fade-in">Advanced parallel programming</span></p>
+				</section>
+
+				<section>
+					<h2>Problem 3</h2>
+					<p class="fragment fade-in">100s of users</p>
+					<p class="fragment fade-in">Solution: <span class="fragment fade-in">Queue system and batch processing</span></p>
+				</section>
+
+				<section>
+					<h2>Problem 4</h2>
+					<p class="fragment fade-in">Making all this work!</p>
+					<p class="fragment fade-in">Solution: <span class="fragment fade-in">Linux operating system</span></p>
+				</section>
+
+				<section>
+					<h2>Problem 5</h2>
+					<p class="fragment fade-in">Learning how to use it</p>
+					<p class="fragment fade-in">Solution: <span class="fragment fade-in">This session</span></p>
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
