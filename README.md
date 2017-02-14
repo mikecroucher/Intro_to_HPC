@@ -23,15 +23,16 @@ On a University machine, you need to install the `portable` version (highlighted
 
 <img src="images/mobaXterm_download.png" />
 
-You can install the full version if you wish to install `mobaXterm` on your own machine. (Note that you can connect to `iceberg` from any location, but will need to be on the University network or use VPN to connect to `sharc`.)
+The download is a zip file that contains three other files. You should **Extract these files**, for example to your desktop, before you use them.
+Do not run MobaXterm directly from the zip file.
 
 `mobaXterm` also contains `mobaTextEditor` which you can use to write your programs.
 
-<h2>Using <tt>iceberg</tt></h2>
+<h2>Log in to `Sharc`</h2>
 
-You can connect to <tt>iceberg</tt> and <tt>sharc</tt> via <tt>mobaXterm</tt>:
+You can connect to `Sharc` (and `iceberg`) using <tt>mobaXterm</tt>:
 
-<img src="images/mobaXterm_new_session.png" />
+<img src="images/mobaxterm_sharc.png" />
 
 To run a <tt>scala</tt> program on a Linux machine, it will need to be compiled using the [Scala build tool](http://www.scala-sbt.org/). This requires a very strict directory structure <b>and</b> a <tt>.sbt</tt> file specifying dependencies. We illustrate this on the <tt>helloWorld</tt> example.
 
