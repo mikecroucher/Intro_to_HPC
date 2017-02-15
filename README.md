@@ -286,9 +286,12 @@ qstat
 
 job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID
 -----------------------------------------------------------------------------------------------------------------
-  81304 0.42776 bash       fe1mpc       r     02/14/2017 23:53:29 interactive.q@sharc-node001.sh     1
-  83909 0.00000 submit_to_ fe1mpc       qw    02/15/2017 03:22:23  `
+  81304 0.42776 bash       ab1abc       r     02/14/2017 23:53:29 interactive.q@sharc-node001.sh     1
+  83909 0.00000 submit_to_ ab1abc       qw    02/15/2017 03:22:23  `
 ```
+
+`qsub` and `qstat` are examples of **scheduler commands**.
+A list of them can be found on the [HPC documentation website](http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/index.html)
 
 **Where did the output go?**
 
