@@ -298,7 +298,7 @@ qsub submit_to_sharc.sh
 Your job 83909 ("submit_to_sharc.sh") has been submitted
 ```
 
-You can see the status of the job with the `qstat` command.
+You can see the status of the queuing or running job with the `qstat` command.
 
 ```
 qstat
@@ -306,8 +306,10 @@ qstat
 job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID
 -----------------------------------------------------------------------------------------------------------------
   81304 0.42776 bash       ab1abc       r     02/14/2017 23:53:29 interactive.q@sharc-node001.sh     1
-  83909 0.00000 submit_to_ ab1abc       qw    02/15/2017 03:22:23  `
+  83909 0.00000 submit_to_ ab1abc       qw    02/15/2017 03:22:23 shortint.q@sharc-node057.shef.     4  
 ```
+
+If you don't see your `submit_to_sharc` job in `qstat`'s output this is probably because it's already finished running!
 
 `qsub` and `qstat` are examples of **scheduler commands**.
 A list of them can be found on the [HPC documentation website](http://docs.hpc.shef.ac.uk/en/latest/hpc/scheduler/index.html)
@@ -327,7 +329,7 @@ Refer to the Wikipedia article on [standard streams](https://en.wikipedia.org/wi
 
 #### Requesting a LOT of memory
 
-If you need to request a lot of memory for your job - for example 50Gigabytes per core - add the following lines to your job submission script:
+If you need to request a lot of memory for your job - for example 50 Gigabytes per core - add the following lines to your job submission script:
 
 ```
 # Tell the sysytem to make use of the project containing the big memory nodes
