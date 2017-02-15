@@ -239,7 +239,7 @@ The <tt>.scala</tt> file needs to be placed in the <tt>scala</tt> directory.
 
 **Compile and run the project**
 
-Exactly as before, we compile and run with  `sbt package.
+Exactly as before, we compile and run with  `sbt package`.
 
 If this is successful, you'll have a file in the location `target/scala-2.11/hello_2.11-1.0.jar`.
 
@@ -250,3 +250,47 @@ spark-submit --master local[1] target/scala-2.11/hello_2.11-1.0.jar
 ```
 
 ### Exercise 7: Run a program in batch mode
+
+Running short jobs, such as compiling our scala code or running `Hello World` is fine in interactive `qrshx` sessions.
+However, when we want to run long jobs or request resources such as multiple CPUs, we should start using **batch processing**.
+
+Let's get an example from GitHub that calculates Pi using a monte carlo algorithm.
+
+```
+git clone https://github.com/mikecroucher/scala-spark-MontePi
+```
+
+Compile it as usual
+
+```
+cd scala-spark-MontePi/
+sbt package
+```
+
+Instead of running it interactively, we are going to submit it to the scheduler queue.
+The example includes a `job submission script` called `submit_to_sharc.sh`
+
+Look at this file using the `more` command to see if you can understand it.
+When you are ready, submit it to the queue with the `qsub` command
+
+```
+qsub submit_to_sharc.sh
+
+Your job 83909 ("submit_to_sharc.sh") has been submitted
+```
+
+You can see the status of the job with the `qstat` command.
+
+```
+qstat
+
+job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID
+-----------------------------------------------------------------------------------------------------------------
+  81304 0.42776 bash       fe1mpc       r     02/14/2017 23:53:29 interactive.q@sharc-node001.sh     1
+  83909 0.00000 submit_to_ fe1mpc       qw    02/15/2017 03:22:23  `
+```
+
+When the job has completed, you will see two new files in your current directory.
+In my case, they were `submit_to_sharc.sh.e83909`  and `submit_to_sharc.sh.o83909`.
+
+Look at these two files with the `more command`
