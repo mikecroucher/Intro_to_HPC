@@ -61,7 +61,7 @@ If this command is successful, you should see the prompt change from `sharc-logi
 
 You are now on a compute node and have access to your own CPU core and 8 Gigabytes of RAM.
 
-Now would be a good time to learn some Linux commands using our [Mini Terminal Tutorial](./terminal_turorial.md)
+Now would be a good time to learn some Linux commands using our [Mini Terminal Tutorial](terminal_turorial.md)
 
 ### Exercise 4: Scala/Spark 'Hello World' (one we made earlier)
 
