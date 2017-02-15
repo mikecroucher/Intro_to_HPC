@@ -260,7 +260,7 @@ The `.scala` file needs to be placed in the `scala` directory.
 
 Exactly as before, we compile and run with `sbt package` **but first** make sure that the **present working directory** of your terminal is the one containing your new `project.sbt` (otherwise when you run `sbt` it won't know how to compile your code).  
 
-You can check your present working directory (PWD) using `pwd` and list the files in your PWD using `ls`.  Change into the `hello` directory if necessary using a two-letter command you learned earlier in this tutorial.
+You can check your present working directory (PWD) using `pwd` and list the files in your PWD using `ls`.  Note that **the PWD of the terminal and of MobaXterm's file browser do not need to be the same**.  Change into the `hello` directory if necessary using a two-letter command you learned earlier in this tutorial.
 
 If `sbt package` is successful, you'll have a file in the location `target/scala-2.11/hello_2.11-1.0.jar`.
 
