@@ -290,7 +290,15 @@ job-ID  prior   name       user         state submit/start at     queue         
   83909 0.00000 submit_to_ fe1mpc       qw    02/15/2017 03:22:23  `
 ```
 
+**Where did the output go?**
+
 When the job has completed, you will see two new files in your current directory.
 In my case, they were `submit_to_sharc.sh.e83909`  and `submit_to_sharc.sh.o83909`.
+The number at the end refers to the `job-ID`
 
 Look at these two files with the `more command`
+
+* The file that ends with `.e83909` contains the standard error stream (stderr)
+* The file that ends with `.o83909` contains the standard output stream (stdout)
+
+Refer to the Wikipedia article on [Standard streams](https://en.wikipedia.org/wiki/Standard_streams) for more information in this terminology.
