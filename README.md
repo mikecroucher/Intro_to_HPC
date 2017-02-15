@@ -305,3 +305,14 @@ Look at these two files with the `more command`
 * The file that ends with `.o83909` contains the standard output stream (stdout)
 
 Refer to the Wikipedia article on [Standard streams](https://en.wikipedia.org/wiki/Standard_streams) for more information in this terminology.
+
+**Requesting a LOT of memory**
+
+If you need to request a lot of memory for your job - for example 50Gigabytes per core, add the following lines to your job submission script.
+
+```
+# Tell the sysytem to make use of the project containing the big memory nodes
+#$ -P rse
+# Ask for 50 Gigabytes per core
+#$ -l rmem=50G
+```
