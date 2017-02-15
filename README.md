@@ -220,26 +220,33 @@ Linux geeks are terminally lazy so if it feels like there should be a shortcut, 
 
 However you do it, you need to create the above 4 embedded directories.
 
-** Create the .sbt and .scala files
+**Create the .sbt and .scala files**
 
-Here, we create <tt>.sbt</tt> file and <tt>.scala</tt> file on the Windows machine and then transfer them to Sharc.
+Here, we create <tt>.sbt</tt> file and <tt>.scala</tt> file on the Windows machine(By downloading them or by copying and pasting them using an editor) and then transfer them to Sharc.
 
 Recall that the <tt>.sbt</tt> file contains the dependencies required by the program. Take a look at the <tt>.sbt</tt> file included [here](files/project.sbt) for the <tt>helloWorld</tt> program. The <tt>.scala</tt> program is also [available](files/hello.scala).
 
-<h4>Copy the <tt>.sbt</tt> file over to the HPC</h4>
+**Copy the <tt>.sbt</tt> file over to Sharc**
 
 The <tt>.sbt</tt> file needs to be placed at the top level of the project.
+You can just drag and drop it from Windows to Sharc using MobaXterm.
 
-<img src="images/mobaXterm_upload.png" />
+<img src="images/mobaxterm_transfer.png" />
 
-<h4>Copy the <tt>.scala</tt> file over to the HPC</h4>
+**Copy the <tt>.scala</tt> file over to the HPC**
 
 The <tt>.scala</tt> file needs to be placed in the <tt>scala</tt> directory.
 
-<h4>Compile the project</h4>
+**Compile and run the project**
 
-<img src="images/mobaXterm_sbt_package.png" />
+Exactly as before, we compile and run with  `sbt package.
 
-<h4>Import spark and run program</h4>
+If this is successful, you'll have a file in the location `target/scala-2.11/hello_2.11-1.0.jar`.
 
-<img src="images/spark_submit.png" />
+Run with
+
+```
+spark-submit --master local[1] target/scala-2.11/hello_2.11-1.0.jar
+```
+
+### Exercise 7: Run a program in batch mode
