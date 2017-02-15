@@ -176,6 +176,14 @@ Run with
 spark-submit --master local[1] target/scala-2.11/hello_2.11-1.0.jar
 ```
 
+You will see _warnings_ like:
+
+```
+WARN: Unable to load native-hadoop library
+```
+
+These can be ignored.
+
 ### Exercise 6: Manually create the directory structure
 
 We'll now learn how to create HelloWorld from scratch to give us practice in using Linux commands.
@@ -190,7 +198,7 @@ The result should be
 
 where `abc123` will be replaced by your username.
 
-** Create the directory structure
+**Create the directory structure
 
 Start by creating the project directory. We'll call this `hello` in this case.
 
