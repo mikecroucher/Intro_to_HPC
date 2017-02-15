@@ -41,11 +41,11 @@ If your log-in is successful, you should see something like the screen below.
 
 <img src="images/sharc_login.png" />
 
-At this point, you are on the `log in` or `Master node` of Sharc. There isn't much compute power here and many people use it simultaneously. As such, we should get onto a worker node as fast as possible.
+At this point, you are on the `log in` or `Master node` of Sharc. There isn't much compute power here and many people use it simultaneously. As such, we should get onto a compute node as fast as possible.
 
 <img src="images/log-in.gif" />
 
-### Exercise 3: Start an interactive session on a worker node.
+### Exercise 3: Start an interactive session on a compute node.
 
 Since Sharc is a shared system, used by 100s of users, we need to request some resources from the `scheduler` using the command `qrshx`. We need to tell the system how much memory we want to use.
 
@@ -58,6 +58,16 @@ For example, to request 8 Gigabytes (8G) of memory, we would enter
 If this command is successful, you should see the prompt change from `sharc-login1` or  `sharc-login-2` to `sharc-nodeXXX` where XXX will be replaced with the number of the node you have been assigned.
 
 <img src="images/worker_shell.png" />
+
+You are now on a compute node and have access to your own CPU core and 8 Gigabytes of RAM.
+
+Now would be a good time to learn some Linux commands using our [Mini Terminal Tutorial](./terminal_turorial.md)
+
+### Exercise 4: Scala/Spark 'Hello World' (one we made earlier)
+
+On the compute node, download a prepared `Hello World` application from GitHub with the command
+
+`git clone https://github.com/mikecroucher/scala-spark-HelloWorld`
 
 To run a <tt>scala</tt> program on a Linux machine, it will need to be compiled using the [Scala build tool](http://www.scala-sbt.org/). This requires a very strict directory structure <b>and</b> a <tt>.sbt</tt> file specifying dependencies. We illustrate this on the <tt>helloWorld</tt> example.
 
