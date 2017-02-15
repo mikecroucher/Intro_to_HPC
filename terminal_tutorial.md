@@ -56,7 +56,9 @@ mkdir -p Helloworld/data/myproject/test1/
 ```
 
 ## Creating files
-You can create empty files using the `touch` command, for example `touch project.scala`. For this you need to be into the directory you want the file to be created, otherwise you need to specify the full path of the file: `mkdir HelloWorld/data/one.txt`
+You can create empty files using the `touch` command, for example `touch project.scala`. For this you need to be into the directory you want the file to be created, otherwise you need to specify the full path of the file:
+
+`touch HelloWorld/data/one.txt`
 
 You can even create multiple files at a time `touch one.txt two.txt`
 
