@@ -114,7 +114,7 @@ The code that is to be compiled is hidden a few directories deeper.
 View it using the `more` command
 
 ```
-more src/main/scala/hello.scala`
+more src/main/scala/hello.scala
 ```
 
 Which should give the output
