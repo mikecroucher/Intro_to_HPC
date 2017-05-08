@@ -331,13 +331,17 @@ Refer to the Wikipedia article on [standard streams](https://en.wikipedia.org/wi
 
 #### Requesting a LOT of memory
 
-If you need to request a lot of memory for your job - for example 50 Gigabytes per core - add the following lines to your job submission script:
+Most of ShARC's nodes have 64Gb of RAM each. There are a small number with 256GB but these are heavily oversubscribed. 
+
+Everyone who is part of the MSc in Data Analytics has access to our [premium queue](http://rse.shef.ac.uk/resources/hpc/premium-hpc/) which includes access to nodes with up to 768GB of memory.
+
+If you need to request a lot of memory for your job - for example 250 Gigabytes per core - add the following lines to your job submission script:
 
 ```
 # Tell the sysytem to make use of the project containing the big memory nodes
 #$ -P rse
-# Ask for 50 Gigabytes per core
-#$ -l rmem=50G
+# Ask for 250 Gigabytes per core
+#$ -l rmem=250G
 ```
 
 ## Troubleshooting
