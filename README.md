@@ -1,4 +1,4 @@
-# Using the High Performance Computing (HPC) systems at Sheffield
+# Using Spark and Scala on the High Performance Computing (HPC) systems at Sheffield
 
 ## Presentation
 
